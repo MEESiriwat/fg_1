@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="IT2503"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-06 02:02:23 PM"/>
+        <attribute name="created" value="SVQyNTAzO0lUMjUwMy0wMDU7MjAyNC0wMi0wNjswMTo0OTo0NyBQTTsyMTk3"/>
+        <attribute name="edited" value="SVQyNTAzO0lUMjUwMy0wMDU7MjAyNC0wMi0wNjswMjowMjoyMyBQTTsxOzIyODk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Eligibility Criteria :&quot;" newline="True"/>
+            <output expression="&quot;Marks in Maths &gt;=65&quot;" newline="True"/>
+            <output expression="&quot;and Marks in Phy &gt;=55&quot;" newline="True"/>
+            <output expression="&quot;and Marks in Chem &gt;=50&quot;" newline="True"/>
+            <output expression="&quot;and Total in all three subject &gt;=190&quot;" newline="True"/>
+            <output expression="&quot;or Total in Maths and Physics &gt;=140&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <declare name="p, c, m" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input the marks obtained in Physics :&quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;Input the marks obtained in Chemistry :&quot;" newline="True"/>
+            <input variable="c"/>
+            <output expression="&quot;Input the marks obtained in Mathematics :&quot;" newline="True"/>
+            <input variable="m"/>
+            <declare name="total, mathPhysicsTotal" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="m + p + c"/>
+            <assign variable="mathPhysicsTotal" expression="m + p"/>
+            <output expression="&quot;Total marks of Maths, Physics and Chemistry: &quot; &amp;total" newline="True"/>
+            <output expression="&quot;Total marks of Maths and Physics: &quot; &amp;mathPhysicsTotal" newline="True"/>
+            <if expression="(m &gt;= 65) and (p &gt;= 55) and (c &gt;= 50) and ((total &gt;= 190) or (mathPhysicsTotal &gt;= 140))">
+                <then>
+                    <output expression="&quot;The candidate is eligible for admission.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The candidate is not eligible.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
